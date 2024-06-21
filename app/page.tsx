@@ -1,6 +1,6 @@
 import DashboardCard from "@/components/dashboard/DashboardCard";
 import { Newspaper, Folder, User, MessageCircle } from "lucide-react";
-
+import PostsTabel from "@/components/posts/PostsTabel";
 const Home = () => {
   return (
     <>
@@ -26,6 +26,7 @@ const Home = () => {
           icon={<MessageCircle className="text-slate-500 " size={72} />}
         />
       </div>
+      <PostsTabel />
     </>
   );
 };
