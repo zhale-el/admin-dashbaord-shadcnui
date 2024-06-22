@@ -26,7 +26,7 @@ const Home = () => {
           icon={<MessageCircle className="text-slate-500 " size={72} />}
         />
       </div>
-      <PostsTabel />
+      <PostsTabel title="Latest Posts" limit={5} />
     </>
   );
 };
