@@ -65,7 +65,7 @@ const PostEditPage = ({ params }: PostEditPageProps) => {
                   Title
                 </FormLabel>
                 <FormControl>
-                  <Input
+                  <Textarea
                     className="bg-slate-100 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
                     placeholder="Enter Title"
                     {...field}
@@ -76,6 +76,73 @@ const PostEditPage = ({ params }: PostEditPageProps) => {
               </FormItem>
             )}
           />
+
+          <FormField
+            control={form.control}
+            name="body"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="uppercase text-xs font-bold text-zinc-500 dark:text-secondary/70">
+                  Body
+                </FormLabel>
+                <FormControl>
+                  <Textarea
+                    className="bg-slate-100 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
+                    placeholder="Enter Body"
+                    {...field}
+                  />
+                </FormControl>
+
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="author"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="uppercase text-xs font-bold text-zinc-500 dark:text-secondary/70">
+                  Author
+                </FormLabel>
+                <FormControl>
+                  <Textarea
+                    className="bg-slate-100 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
+                    placeholder="Enter Author"
+                    {...field}
+                  />
+                </FormControl>
+
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="date"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="uppercase text-xs font-bold text-zinc-500 dark:text-secondary/70">
+                  Date
+                </FormLabel>
+                <FormControl>
+                  <Textarea
+                    className="bg-slate-100 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
+                    placeholder="Enter Date"
+                    {...field}
+                  />
+                </FormControl>
+
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <Button className="w-full dark:bg-slate-800 text-white">
+            Update Post
+          </Button>
         </form>
       </Form>
     </>
