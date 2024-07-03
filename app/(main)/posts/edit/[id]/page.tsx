@@ -11,7 +11,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-
+import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import posts from "@/data/posts";
@@ -51,12 +51,14 @@ const PostEditPage = ({ params }: PostEditPageProps) => {
       date: post?.date || "",
     },
   });
+
   const handleSubmit = (data: z.infer<typeof formSchema>) => {
     toast({
       title: "Post has been updated successfuly",
       description: `Updated by ${post?.author} on ${post?.date} `,
     });
   };
+
   return (
     <>
       <BackButton text="Back To Posts" link="/posts" />
@@ -72,7 +74,7 @@ const PostEditPage = ({ params }: PostEditPageProps) => {
                   Title
                 </FormLabel>
                 <FormControl>
-                  <Textarea
+                  <Input
                     className="bg-slate-100 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
                     placeholder="Enter Title"
                     {...field}
@@ -114,7 +116,7 @@ const PostEditPage = ({ params }: PostEditPageProps) => {
                   Author
                 </FormLabel>
                 <FormControl>
-                  <Textarea
+                  <Input
                     className="bg-slate-100 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
                     placeholder="Enter Author"
                     {...field}
@@ -135,7 +137,7 @@ const PostEditPage = ({ params }: PostEditPageProps) => {
                   Date
                 </FormLabel>
                 <FormControl>
-                  <Textarea
+                  <Input
                     className="bg-slate-100 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
                     placeholder="Enter Date"
                     {...field}
